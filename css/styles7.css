@@ -1,0 +1,114 @@
+img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; /* Делаем изображение круглым */
+    object-fit: cover; /* Обрезаем изображение, чтобы оно полностью заполнило круг */
+    object-position: center; /* Центрируем изображение внутри круга */
+}
+
+a:active {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000 #aaa #aaa #000;
+}
+
+a:hover {
+    background: darkorange;
+}
+
+.myTitle {
+    font-family: 'Tektur', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+}
+
+#my-first-div {
+    font-size: 16px;
+}
+
+#the-second-one {
+    font-size: 24px; 
+}
+
+h2 {
+    font-size: 0.8em;
+}
+
+h3 {
+    font-size: 0.8rem;
+}
+
+a {
+    display: inline-block; /* Позволяет использовать padding и width/height */
+    padding: 10px;
+    border-radius: 4px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+@keyframes moveAndColor {
+    0%   {background-color: red; left: 0px; top: 0px;}
+    25%  {background-color: yellow; left: 200px; top: 0px;}
+    50%  {background-color: blue; left: 200px; top: 200px;}
+    75%  {background-color: green; left: 0px; top: 200px;}
+    100% {background-color: red; left: 0px; top: 0px;}
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: moveAndColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; /* Движение вперед и назад */
+  }
+  
+  /* Применение разных timing-function */
+  #box1 { animation-timing-function: linear; }
+  #box2 { animation-timing-function: ease; }
+  #box3 { animation-timing-function: ease-in; }
+  #box4 { animation-timing-function: ease-out; }
+  #box5 { animation-timing-function: ease-in-out; }
+
+.eclipse-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.sun {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 204, 128, 0.9), rgba(255, 153, 51, 0.5), rgba(0, 0, 0, 0));
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(255, 204, 128, 0.8);
+}
+
+.moon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #0b0f26;
+    border-radius: 50%;
+    animation: eclipse 6s infinite alternate ease-in-out;
+}
+
+@keyframes eclipse {
+    0% {
+        transform: translateX(-120px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(120px);
+    }
+}
+
